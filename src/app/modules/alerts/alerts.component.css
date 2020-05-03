@@ -1,0 +1,11 @@
+.alert-header-div {
+  background-color: #616e96;
+  color: #add8e6;
+  font-size: 12px;
+  font-family: monospace;
+  text-align: center;
+  font-weight: 700;
+  font-style: italic;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

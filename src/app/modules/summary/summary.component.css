@@ -1,0 +1,59 @@
+.total-cases-header,
+.total-deaths-header,
+.mortality-rate-header,
+.total-recoveries-header,
+.recovery-rate-header {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  color: #add8e6;
+  font-family: Helvetica;
+}
+
+.total-cases-data {
+  text-align: center;
+  font-size: 50px;
+  color: #faebd7;
+  font-family: Helvetica;
+}
+
+.total-deaths-data,
+.mortality-rate-data {
+  text-align: center;
+  font-size: 50px;
+  color: #ce4545;
+  font-family: Helvetica;
+}
+
+.total-recoveries-data,
+.recovery-rate-data {
+  text-align: center;
+  font-size: 50px;
+  color: #56d386;
+  font-family: Helvetica;
+}
+
+.total-new-cases-data {
+  text-align: center;
+  font-size: 20px;
+  color: #faebd7;
+  font-family: Helvetica;
+}
+
+.total-new-deaths-data {
+  text-align: center;
+  font-size: 20px;
+  color: #ce4545;
+  font-family: Helvetica;
+}
+
+.new-country-cases-header,
+.new-country-deaths-header,
+.new-country-cases-data,
+.new-country-deaths-data {
+  text-align: center;
+  font-size: small;
+  color: lightblue;
+  font-family: Helvetica;
+  font-style: italic;
+}

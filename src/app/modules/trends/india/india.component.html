@@ -1,0 +1,75 @@
+<h1>
+    <span class="summary-link" routerLink="/summary-stats">COVID-19</span>
+    / INDIA TRENDS
+</h1>
+
+<div *ngIf="!dates" class="data-loading-div">Data Loading...</div>
+<br />
+<div class="dropdown">
+    <select [(ngModel)]="state" (ngModelChange)="trendSearchByState($event)">
+        <option selected>All States</option>
+        <option *ngFor="let state of states">
+            {{ state }}
+        </option>
+    </select>
+</div>
+
+<div class="span-prev" (click)="displayPrevGraph()">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+</div>
+<div class="span-next" (click)="displayNextGraph()">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+</div>
+
+<br /><br />
+
+<div class="chart-growth-container" *ngIf="showAll && dates && states && showLineGraph">
+    <canvas baseChart #lineChartGrowthCanvas [datasets]="lineGraphGrowthData" [labels]="lineGraphGrowthLabels"
+        [options]="lineGraphGrowthOptions" [legend]="lineGraphGrowthLegend" [chartType]="lineGraphGrowthType"
+        width="800" height="400">
+    </canvas>
+</div>
+<div class="chart-growth-container" *ngIf="showAll && dates && states && showBarGraph">
+    <canvas baseChart #barChartGrowthCanvas [datasets]="barGraphGrowthData" [labels]="barGraphGrowthLabels"
+        [options]="barGraphGrowthOptions" [legend]="barGraphGrowthLegend" [chartType]="barGraphGrowthType" width="800"
+        height="400">
+    </canvas>
+</div>
+<div class="chart-growth-container" *ngIf="showAll && dates && states && showProjectionGraph">
+    <canvas baseChart #lineChartProjectionCanvas [datasets]="lineGraphProjectionData"
+        [labels]="lineGraphProjectionLabels" [options]="lineGraphProjectionOptions" [legend]="lineGraphProjectionLegend"
+        [chartType]="lineGraphProjectionType" width="400" height="400">
+    </canvas>
+</div>
+<div class="chart-growth-container" *ngIf="showAll && dates && states && showScatterGraph">
+    <canvas baseChart #scatterChartGrowthCanvas [datasets]="scatterGraphGrowthData" [labels]="scatterGraphGrowthLabels"
+        [options]="scatterGraphGrowthOptions" [legend]="scatterGraphGrowthLegend" [chartType]="scatterGraphGrowthType"
+        width="800" height="400">
+    </canvas>
+</div>
+<div class="chart-growth-state-container" *ngIf="showState && showLineGraph">
+    <canvas #lineChartGrowthStateCanvas baseChart [datasets]="lineGraphGrowthStateData"
+        [labels]="lineGraphGrowthStateLabels" [options]="lineGraphGrowthStateOptions"
+        [legend]="lineGraphGrowthStateLegend" [chartType]="lineGraphGrowthStateType" width="800" height="400">
+    </canvas>
+</div>
+<div class="chart-growth-state-container" *ngIf="showState && showBarGraph">
+    <canvas #barChartGrowthStateCanvas baseChart [datasets]="barGraphGrowthStateData"
+        [labels]="barGraphGrowthStateLabels" [options]="barGraphGrowthStateOptions" [legend]="barGraphGrowthStateLegend"
+        [chartType]="barGraphGrowthStateType" width="800" height="400">
+    </canvas>
+</div>
+<div class="chart-growth-state-container" *ngIf="showState && showProjectionGraph">
+    <canvas #lineChartProjectionStateCanvas baseChart [datasets]="lineGraphProjectionStateData"
+        [labels]="lineGraphProjectionStateLabels" [options]="lineGraphProjectionStateOptions"
+        [legend]="lineGraphProjectionStateLegend" [chartType]="lineGraphProjectionStateType" width="400" height="400">
+    </canvas>
+</div>
+<div class="chart-growth-state-container" *ngIf="showState && showScatterGraph">
+    <canvas #scatterChartGrowthStateCanvas baseChart [datasets]="scatterGraphGrowthStateData"
+        [labels]="scatterGraphGrowthStateLabels" [options]="scatterGraphGrowthStateOptions"
+        [legend]="scatterGraphGrowthStateLegend" [chartType]="scatterGraphGrowthStateType" width="800" height="400">
+    </canvas>
+</div>

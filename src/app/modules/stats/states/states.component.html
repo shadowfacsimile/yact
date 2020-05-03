@@ -1,0 +1,67 @@
+<h1>
+    <span class="summary-link"  routerLink="/summary-stats">COVID-19</span>
+     / {{filterCountry.toUpperCase()}} SUMMARY
+</h1>
+
+<div *ngIf=!coronaStatesStatsResponse class="data-loading-div">Data Loading...</div>
+
+<div *ngIf=coronaStatesStatsResponse>
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <td>        
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input class="stats-search-text" type="text" name="state" (ngModelChange)="searchByState($event)"
+            [ngModel]="state" placeholder="  Search by state..." ngDefaultControl autocomplete="off"/>
+        </td>
+      </tr>
+    </thead>
+  </table>
+  <div class="state-stats-text">Please note that the sum of all state/provincial cases may not match the total number of cases in the country.</div>
+  <table class="table table-hover">
+    <thead class="stat-table-header">
+      <tr>
+        <th class="nowrap" scope="col">State/Province <span class="sort-span" (click)="sortByState()" [ngModel]="state"
+            ngDefaultControl>⇅</span></th>
+        <th class="nowrap" scope="col">Cases <span class="sort-span" (click)="sortByCases()" [ngModel]="state"
+            ngDefaultControl>⇅</span></th>
+        <th class="nowrap" scope="col">New Cases <span class="sort-span" (click)="sortByNewCases()" [ngModel]="state"
+            ngDefaultControl>⇅</span></th>
+        <th class="nowrap" scope="col">Deaths <span class="sort-span" (click)="sortByDeaths()" [ngModel]="state"
+            ngDefaultControl>⇅</span></th>
+        <th class="nowrap" scope="col">New Deaths <span class="sort-span" (click)="sortByNewDeaths()" [ngModel]="state"
+            ngDefaultControl>⇅</span></th>
+        <th class="nowrap" scope="col">Mortality Rate <span class="sort-span" (click)="sortByMortalityRate()" [ngModel]="state"
+            ngDefaultControl>⇅</span></th>
+        <th class="nowrap" scope="col">Recoveries <span class="sort-span" (click)="sortByRecoveries()" [ngModel]="state"
+            ngDefaultControl>⇅</span></th>
+        <th class="nowrap" scope="col">Recovery Rate <span class="sort-span" (click)="sortByRecoveryRate()" [ngModel]="state"
+            ngDefaultControl>⇅</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stat of coronaStatesStatsResponse">
+        <td class="stat-table-state-td">          
+          <span>{{stat.state ?  stat.state : 'Rest of ' + filterCountry}}</span>
+        </td>
+        <td class="stat-table-td">{{stat.totalCases | number}}</td>
+        <td class="stat-table-td"
+          [ngStyle]="{'font-size' : stat.totalNewCases > 0 ? '10' : '0', 'color': 'rgb(206, 69, 69)'}">
+          +{{stat.totalNewCases | number}}</td>
+        <td class="stat-table-td" [ngStyle]="{'font-size' : stat.totalDeaths > 0 ? '10' : '0'}">{{stat.totalDeaths | number}}</td>
+        <td class="stat-table-td"
+          [ngStyle]="{'font-size' : stat.totalNewDeaths > 0 ? '10' : '0', 'color' : 'rgb(206, 69, 69)'}">
+          +{{stat.totalNewDeaths | number}}</td>
+        <td class="stat-table-td" [ngStyle]="{'font-size' : stat.mortalityRate > 0 ? '10' : '0'}">
+          {{stat.mortalityRate | percent:'1.2'}}</td>
+        <td class="stat-table-td" [ngStyle]="{'font-size' : stat.totalRecoveries > 0 ? '10' : '0'}">
+          {{stat.totalRecoveries | number}}</td>
+        <td class="stat-table-td" [ngStyle]="{'font-size' : stat.recoveryRate > 0 ? '10' : '0'}">
+          {{stat.recoveryRate | percent:'1.2'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

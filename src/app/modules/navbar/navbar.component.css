@@ -1,0 +1,70 @@
+.navbar-brand {
+    background-color: #21283a;
+    color: #bebeca;
+    font-size: 18px;
+    font-family: Helvetica;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .navbar {
+    background-color: #21283a;
+  }
+  
+  #navbarDropdown {
+    float: right;
+    padding-right: 100px;
+    color: #bebeca;
+    font-size: 20px;
+    font-family: Helvetica;
+  }
+  
+  .dropdown-item {
+    background-color: #21283a;
+    color: #bebeca;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: Helvetica;
+  }
+  
+  .active {
+    background-color: #21283a;
+    color: #bebeca;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: Helvetica;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #21283a;
+    color: #bebeca;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: Helvetica;
+  }
+  
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .navbar-toggler > .close {
+    display: inline;
+  }
+  
+  .navbar-toggler.collapsed > .close,
+  .navbar-toggler:not(.collapsed) > .navbar-toggler-icon {
+    display: none;
+  }
+  
+  .my-1 {
+    background-color: #21283a;
+    color: #bebeca;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: Helvetica;
+  }
+  

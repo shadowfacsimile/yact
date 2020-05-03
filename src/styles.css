@@ -1,0 +1,178 @@
+body {
+  background-color: #353f5c;
+  padding-bottom: 50px;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+hr {
+  border: 0.2px solid #4d5b85;
+}
+
+section {
+  text-align: center;
+  font-size: 10px;
+  font-family: Helvetica;
+  color: #add8e6;
+  padding-bottom: 10px;
+}
+
+section a {
+  color: #008dc9;
+}
+
+h1 {
+  color: #bebeca;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Helvetica;
+  padding: 4px 30px;
+  padding-bottom: 20px;
+}
+
+h1 span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #008dc9;
+}
+
+.data-loading-div {
+  color: lightblue;
+  text-align: center;
+  font-size: large;
+  font-weight: normal;
+  font-family: Helvetica;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.dropdown {
+  text-align: center;
+}
+
+.dropdown select {
+  border: none;
+  border-radius: 4px;
+  font-size: small;
+  background-color: #4e5b85;
+  color: #add8e6;
+  font-family: Helvetica;
+}
+
+.span-prev {
+  float: left;
+  padding-left: 50px;
+}
+
+.span-next {
+  float: right;
+  padding-right: 50px;
+}
+
+canvas {
+  width: 80% !important;
+  height: auto !important;
+}
+
+.chart-growth-container {
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding-left: 50px;
+}
+
+.chart-growth-country-container {
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding-left: 50px;
+}
+
+.chart-growth-state-container {
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding-left: 50px;
+}
+
+.router-links {
+  text-align: center;
+}
+
+.router-links a {
+  color: #008dc9;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 450;
+  font-family: Helvetica;
+}
+
+.summary-link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #008dc9;
+}
+
+.stat-table-td {
+  font-weight: 400;
+  font-family: Helvetica;
+  color: #add8e6;
+  text-align: center;
+}
+
+.stat-table-header {
+  color: #faebd7;
+  font-family: Helvetica;
+}
+
+.stat-table-country-td {
+  font-weight: 400;
+  font-family: Helvetica;
+  color: #add8e6;
+}
+
+.stat-table-state-td {
+  font-weight: 400;
+  font-family: Helvetica;
+  color: #add8e6;
+}
+
+.stats-search-text {
+  border: none;
+  border-radius: 4px;
+  font-size: small;
+  background-color: #4e5b85;
+  color: #add8e6;
+  font-family: Helvetica;
+}
+
+.sort-span {
+  cursor: pointer;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+::placeholder {
+  color: lightblue;
+}
+
+.state-stats-text {
+  padding-left: 15px;
+  font-size: 10px;
+  color: #faebd7;
+  padding-bottom: 5px;
+}

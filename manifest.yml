@@ -1,0 +1,8 @@
+---
+applications:
+ - name: ShadowCoronaTracker
+   host: shadowcoronatracker
+   path: dist/corona-tracker
+   memory: 256M
+   instances: 1
+   buildpack: "https://github.com/cloudfoundry/staticfile-buildpack.git"

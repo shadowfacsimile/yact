@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#"><strong>YET ANOTHER COVID-19 TRACKER</strong></a>
+
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    <span class="my-1 mx-2 close">X</span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="dropdown-item" routerLink="/summary-stats" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">summary</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="dropdown-item" routerLink="/stats-by-country" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">countries</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="dropdown-item" routerLink="/cases-trend-by-country" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">cases trends</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="dropdown-item" routerLink="/deaths-trend-by-country" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">deaths trends</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="dropdown-item" routerLink="/india-stats" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">india trends</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="dropdown-item" routerLink="/about" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">about</a>
+      </li>
+    </ul>
+  </div>
+</nav>

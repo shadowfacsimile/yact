@@ -1,0 +1,53 @@
+<div class="growth-header-div">
+    <span class="growth-header-span">
+        <span class="summary-link" routerLink="/summary-stats">COVID-19</span>
+        / CASES GROWTH FACTOR
+    </span>
+</div>
+<br />
+<div class="growth-factor-text">
+    <strong>Growth Factor</strong> is the ratio between the number of new cases of
+    one day to the number of new cases the previous day. The growth factor stays
+    consistently above 1 until it hits an
+    <strong>Inflection Point of the Logistic Curve</strong>, which could mean the
+    total number of cases will max out at about 2 times from where you are. If it
+    is bigger than 1 you are in the
+    <strong>Exponential part of the Logistic Curve</strong>, which could mean
+    there is orders of magnitude of growth ahead.
+</div>
+<br />
+<div *ngIf="!dates" class="data-loading-div">
+    <span class="data-loading-span">Data Loading...</span>
+</div>
+
+<div class="growth-beige-highlight-div">
+    <span *ngIf="growthFactorToday" class="growth-beige-highlight-span">Growth Factor Trend : Today -
+        {{ growthFactorToday.growthFactor | number }} /
+    </span>
+    <span *ngIf="growthFactorToday" class="growth-beige-highlight-span">Yesterday -
+        {{ growthFactorYesterday.growthFactor | number }} /
+    </span>
+    <span *ngIf="growthFactorToday" class="growth-beige-highlight-span">Week Back -
+        {{ growthFactorWeek.growthFactor | number }} /
+    </span>
+    <span *ngIf="growthFactorToday" class="growth-beige-highlight-span">3 Weeks Back -
+        {{ growthFactorThreeWeeks.growthFactor | number }} /
+    </span>
+    <span *ngIf="growthFactorToday" class="growth-beige-highlight-span">Month Back -
+        {{ growthFactorMonth.growthFactor | number }} /
+    </span>
+</div>
+<br />
+<br />
+<table>
+    <tr>
+        <td>
+            <div class="chart-growthfactor-container" *ngIf="dates">
+                <canvas baseChart [datasets]="lineGraphGrowthFactorData" [labels]="lineGraphGrowthFactorLabels"
+                    [options]="lineGraphGrowthFactorOptions" [legend]="lineGraphGrowthFactorLegend"
+                    [chartType]="lineGraphGrowthFactorType" width="800" height="400">
+                </canvas>
+            </div>
+        </td>
+    </tr>
+</table>
