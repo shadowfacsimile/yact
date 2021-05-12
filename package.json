@@ -19,7 +19,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "https-proxy-agent": "^5.0.0",
     "minimist": ">=1.2.3",
     "ng-marquee": "^9.4.0",
